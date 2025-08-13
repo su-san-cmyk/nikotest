@@ -1,15 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <h1 class="title">Hello World</h1>
-        <div id="mainDiv">Hello Div</div>
-        <br />
-        <button onclick="buttonClicked()">Click me</button>
-    </body>
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ニッコー（仮） | TOP</title>
+  <meta name="description" content="地域に根ざしたスーパーマーケット。50年の感謝を胸に、新たな一歩へ。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+    
+<body>
+  <div id="page-top"></div>
+
+<header>
+  <div class="nav" role="navigation" aria-label="グローバルナビ">
+    <div class="brand">
+      <img src="./assets/images/rogo.png" alt="ロゴ">
+      <strong>ニッコー（仮）</strong>
+    </div>
+    <nav class="menu" aria-label="メニュー">
+      <a href="#">ホーム</a><a href="#about">企業情報</a><a href="#news">お知らせ</a><a href="#blog">ブログ</a>
+    </nav>
+    <div class="search" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section class="hero" role="img" aria-label="畑の朝焼け">
+  <div class="hero-inner">
+    <h1>小さな出会い、 ふれあう心</h1>
+    <p>ニッコーは新たなステージへ挑戦します</p>
+    <a class="btn" href="#flyer">チラシはこちら</a>
+  </div>
+</section>
+<section class="intro" id="about">
+  <div class="wrap">
+    <h2>地域のお客様に支えられて創業５０年</h2>
+    <p>地域インフラの品質を高めた「また行きたくなるお店」を目指しています。</p>
+    <figure><img src="./assets/images/50.png" alt="50周年"></figure>
+  </div>
+</section>
+    
+<!-- ── グレー帯（価値メッセージ） ─────────────────────────── -->
+<section class="band">
+  <div class="wrap">
+    <h3>地域密着型スーパーだからこそ実現できることがあります</h3>
+    <p>産地さんから朝採れで野菜を仕入れたり、子どもの食育イベントに協賛したり。地域を身近にする取り組みを続けています。</p>
+
+    <!-- ★ js-tabs を必ず付ける -->
+    <div class="tabs js-tabs" role="tablist" aria-label="メニュー">
+      <button class="tab is-active" type="button" data-target="#m1" aria-selected="true">MISSION 1</button>
+      <button class="tab" type="button" data-target="#m2" aria-selected="false">MISSION 2</button>
+      <button class="tab" type="button" data-target="#m3" aria-selected="false">INFO</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── MISSION：タブで中身切替 ─────────────────────────── -->
+<section class="section" id="mission">
+  <!-- panel 1（初期表示） -->
+  <div id="m1" class="mission-panel is-active" role="tabpanel">
+    <figure class="pic"><img src="./assets/images/mission1.png" alt="寿司ポスター"></figure>
+    <div class="txt">
+      <h2 class="eyebrow">MISSION</h2>
+      <h3>地域密着型</h3>
+      <p>地域に貢献することで、おうちの笑顔を増やしたい。品質第一で、毎日の食卓を支えるお店づくりを目指しています。</p>
+      <p><a class="btn is-outline" href="#more">詳しくはこちら</a></p>
+    </div>
+  </div>
+
+  <!-- panel 2（★ここを mission2 用の画像＆文に） -->
+  <div id="m2" class="mission-panel" role="tabpanel">
+    <figure class="pic"><img src="./assets/images/mission2.png" alt="朝どれ野菜を産地から直送"></figure>
+    <div class="txt">
+      <h2 class="eyebrow">MISSION 2</h2>
+      <h3>産地とお客様をつなぐ</h3>
+      <p>朝5時に収穫した野菜をその日のうちに店頭へ。生産者の想いも一緒に伝わる売り場づくりに取り組んでいます。</p>
+      <p><a class="btn" href="#more2">取り組みを見る</a></p>
+    </div>
+  </div>
+
+  <!-- panel 3（サンプル） -->
+  <div id="m3" class="mission-panel" role="tabpanel">
+    <figure class="pic"><img src="./assets/images/50.png" alt="50周年"></figure>
+    <div class="txt">
+      <h2 class="eyebrow">INFO</h2>
+      <h3>50周年のあゆみ</h3>
+      <p>節目の取り組みやイベント情報はこちら。</p>
+      <p><a class="btn is-outline" href="#anniv">特設ページへ</a></p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <!-- 左：ブランド -->
+    <div class="f-brand">
+      <img src="./assets/images/rogo.png" alt="" class="f-logo">
+      <div>
+        <strong>ニッコー（仮）</strong>
+        <p>地域に根ざしたスーパーマーケット</p>
+      </div>
+    </div>
+
+    <!-- 中：ナビ -->
+    <nav class="f-col" aria-label="フッターナビ">
+      <h4>メニュー</h4>
+      <ul>
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#about">企業情報</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#blog">ブログ</a></li>
+      </ul>
+    </nav>
+
+    <!-- 右：お問い合わせ/SNS -->
+    <div class="f-col">
+      <h4>お問い合わせ</h4>
+      <p class="f-text">
+        受付：9:00–18:00（年末年始除く）<br>
+        TEL：012-345-6789
+      </p>
+      <div class="sns">
+        <!-- Instagram（インラインSVG） -->
+        <a class="sns-btn ig" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor"
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6.25-3a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18.25 6.5z"/>
+          </svg>
+        </a>
+        <!-- LINE風（メッセージ） -->
+        <a class="sns-btn ln" href="#" aria-label="LINE">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor"
+              d="M12 3c5.25 0 9.5 3.36 9.5 7.5 0 3.9-3.7 7.17-8.62 7.46-.62.04-1.07.53-1.04 1.1l.06 1.44c.02.5-.54.82-.97.54l-2.45-1.62c-.18-.12-.4-.18-.61-.18C4.33 19.24 2.5 16 2.5 10.5 2.5 6.36 6.75 3 12 3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>© <span id="y"></span> ニッコー（仮）</small>
+    <nav class="f-bottom-links" aria-label="補助リンク">
+      <a href="#policy">サイトについて</a>
+      <a href="#faq">よくあるご質問</a>
+      <a href="#contact">お問い合わせ</a>
+    <a href="#page-top" class="to-top" aria-label="ページの先頭へ">▲</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- 年表示（そのまま使い回しでOK） -->
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+    
+<script src="./script.js"></script>
+
+</body>
 </html>
